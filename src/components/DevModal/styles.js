@@ -44,6 +44,7 @@ export const Modal = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     input {
       box-sizing: border-box;
       outline: none;
