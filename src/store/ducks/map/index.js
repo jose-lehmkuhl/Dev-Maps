@@ -29,7 +29,6 @@ export const removeUser = id => ({
 
 const INITIAL_STATE = {
   markers: [],
-  loading: false,
   newMarkerLocation: '',
   error: '',
 };
@@ -41,11 +40,10 @@ export default function favorites(state = INITIAL_STATE, action) {
     case 'CLEAR_NEW_MARKER_LOCATION':
       return { ...state, newMarkerLocation: '', error: '' };
     case 'NEW_MARKER_REQUEST':
-      return { ...state, loading: true };
+      return { ...state };
     case 'NEW_MARKER_SUCCESS':
       return {
         ...state,
-        loading: false,
         markers: [
           ...state.markers,
           {
@@ -57,7 +55,7 @@ export default function favorites(state = INITIAL_STATE, action) {
         error: '',
       };
     case 'NEW_MARKER_FAIL':
-      return { ...state, loading: false, error: action.payload };
+      return { ...state, error: action.payload };
     case 'REMOVE_USER':
       return {
         ...state,

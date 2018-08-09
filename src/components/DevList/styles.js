@@ -15,11 +15,14 @@ export const Container = styled.div`
 `;
 
 export const User = styled.div`
+font-family: sans-serif;
+    box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: row;
   margin: 15px 0;
-  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EEE;
 
   img {
     height: 48px;
@@ -36,7 +39,9 @@ export const User = styled.div`
 
   p {
     font-weight: bold;
-    margin-bottom: 0;
+    color: #333
+    font-size: 16px;
+    margin: 0;
   }
 
   small {
@@ -60,7 +65,7 @@ export const User = styled.div`
 
       .fa-times-circle {
         margin-right: 20px;
-        color: #f44;
+        color: #D45454;
       }
 
       &:hover {

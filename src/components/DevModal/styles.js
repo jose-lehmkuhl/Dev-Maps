@@ -12,6 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Modal = styled.div`
+  font-family: sans-serif;
   position: absolute;
   box-sizing: border-box;
   margin: auto;
@@ -21,7 +22,7 @@ export const Modal = styled.div`
   right: 0;
   z-index: 2;
   height: fit-content;
-  width: fit-content;
+  width: 340px;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -39,6 +40,7 @@ export const Modal = styled.div`
 
   form {
     padding: 20px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -49,10 +51,11 @@ export const Modal = styled.div`
       height: 40px;
       border-radius: 5px;
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 14px;
+      border-style: solid;
       border-width: 1;
-      border-color: #444;
-      padding: 5px 5px;
+      border-color: #ccc;
+      padding: 10px 10px;
 
       border: ${({ gotError }) => (gotError ? '2px solid #F00' : 1)};
     }
@@ -60,8 +63,8 @@ export const Modal = styled.div`
     button {
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 5px 5px;
-      font-size: 20px;
+      padding: 10px 10px;
+      font-size: 16px;
       height: 40px;
       width: 48%;
       padding: 10px;
@@ -69,11 +72,11 @@ export const Modal = styled.div`
     }
 
     .cancelar {
-      background: #aaa;
+      background: #ccc;
     }
 
     .submit {
-      background: green;
+      background: #7b7;
     }
   }
 `;

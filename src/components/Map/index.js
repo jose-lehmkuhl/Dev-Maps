@@ -5,6 +5,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as MapActions from '../../store/ducks/map';
 
+const markerStyle = {
+  borderRadius: 100,
+  width: 48,
+  height: 48,
+  borderStyle: 'solid',
+  borderWidth: 5,
+  borderColor: '#7159C1',
+};
+
 class Map extends Component {
   state = {
     viewport: {
@@ -46,15 +55,7 @@ class Map extends Component {
         {markers
           && markers.map(marker => (
             <Marker key={marker.user.id} latitude={marker.latLng[1]} longitude={marker.latLng[0]}>
-              <img
-                alt=""
-                style={{
-                  borderRadius: 100,
-                  width: 48,
-                  height: 48,
-                }}
-                src={marker.user.avatar_url}
-              />
+              <img alt="" style={markerStyle} src={marker.user.avatar_url} />
             </Marker>
           ))}
       </MapGL>

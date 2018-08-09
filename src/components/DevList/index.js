@@ -13,7 +13,7 @@ const DevList = ({ users, removeUser }) => (
       <User key={id}>
         <img src={avatar_url} alt="" />
         <div>
-          <p>{name.length > 20 ? name.slice(0, 20) : name}</p>
+          <p>{name && name.length > 15 ? name.slice(0, 14) : name}</p>
           <small>{login}</small>
         </div>
         <div className="icons">
